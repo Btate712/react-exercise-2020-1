@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders app 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    User Name: 
+    Bob
+  </h1>
+  <h2>
+    User ID: 
+    1
+  </h2>
+  <h2>
+    Posts:
+  </h2>
+  <ul>
+    <li>
+      Post 1
+       - 
+      2/2/2020
+    </li>
+    <li>
+      Post 2
+       - 
+      2/3/2020
+    </li>
+    <li>
+      Post 3
+       - 
+      2/4/2020
+    </li>
+  </ul>
+</div>
+`;
