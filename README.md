@@ -6,7 +6,7 @@ components while waiting for asyncronous actions such as getting data from an AP
 
 ## Installation:
 
-Clone this repository and run the command "npm install" to install all dependencies.
+Fork and clone this repository and run the command "npm install" to install all dependencies.
 
 ## Exercise:
 
