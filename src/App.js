@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import User from './components/user/user';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <User user={{
+        name: "Bob", 
+        id: 1, 
+        posts: [
+          {
+            title: "Post 1",
+            date: "2/2/2020",
+            content: "blah, blah, blah"
+          },{
+            title: "Post 2",
+            date: "2/3/2020",
+            content: "more words..."
+          },{
+            title: "Post 3",
+            date: "2/4/2020",
+            content: "getting tired of making this stuff up..."
+          }
+        ]
+      }}/>
     </div>
   );
 }
