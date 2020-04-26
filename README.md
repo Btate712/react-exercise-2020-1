@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Exercise #1
 
-## Available Scripts
+This is an exercise in creating a React component that will conditionally render the word
+"loading" if the value passed in as props is not defined. This is one solution to rendering
+components while waiting for asyncronous actions such as getting data from an API to complete.
 
-In the project directory, you can run:
+## Installation:
 
-### `npm start`
+Clone this repository and run the command "npm install" to install all dependencies.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Exercise:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+In the file "src/components/user/user.js", create a component named "User" that accepts a prop
+"user" which will either be undefined or an object with the following structure:
+```
+{
+  name: "admin",
+  id: 1,
+  posts: [
+    {
+      date: "2/2/2020",
+      title: "My First Post",
+      content: "blah, blah, blah..."
+    },{
+      date: "2/3/2020",
+      title: "Another Post",
+      content: "more words..."
+    }
+  ]
+}
+```
 
-### `npm test`
+The user can have any number of posts stored in the posts array.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If the "user" prop is defined, User should render as follows:
+```
+  <h1>User Name: admin</h1>
+  <h2>User ID: 1</h2>
+  <h2>Posts:</h2>
+  <ul>
+    <li>My First Post - 2/2/2020</li>
+    <li>Another Post - 2/3/2020</li>
+  </ul>
+```
 
-### `npm run build`
+## Running the tests
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Enter "npm test" in the console to run the tests. When all tests pass, the exercise is complete.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## My solution
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+If you'd like to see the solution I wrote, it's stored in the repository under the branch "solution".
