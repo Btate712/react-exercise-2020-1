@@ -18,7 +18,7 @@ const User = ({user}) => {
 
   return(
     <>
-      {user ? renderedContent : (<h1>loading...</h1>)}
+      {user ? renderedContent : (<h2>loading...</h2>)}
     </>
   )
 }
